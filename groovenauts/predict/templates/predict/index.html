@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <html>
@@ -38,13 +39,16 @@
     <body>
         <h1>
 	<hr>
+		{% load staticfiles %}
             <font size=21 color=#80A0FA>
+	<img width=70 height = 50 src="{% static "predict/dd.jpg" %}" alt="My image1">
             <b>What's the status of my hair?</b></font>
             <hr>
         </h1>
         <h2> 
 	<font size = 6>
 	Predict your condition!</font>
+	<img height=50 width=60 src="{% static "predict/aa.jpg" %}" alt="My image2">
 	<font size = 3>
 	 <p>You can easily check your hair loss.<br>
 	When you take a picture of your scalp and upload it to a website, powerful A.<br>
@@ -58,7 +62,8 @@
 	<fieldset><legend align="center">
 	<font size=6>
             Predict Result</font>
-        <p>{{source}}</p></legend></fieldset>
+	<img height=40 width=50 src="{% static "predict/cc.jpg" %}" alt="My image3"></legend>	
+        	<p>{{source}}</p></fieldset>
         </h3>
         <h4><div>
 	<font size=3 color = "white">
