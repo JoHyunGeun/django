@@ -17,6 +17,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='information',
             name='sex',
-            field=models.CharField(default='', max_length=5),
+            field=models.CharField(default='', max_length=6),
         ),
     ]
