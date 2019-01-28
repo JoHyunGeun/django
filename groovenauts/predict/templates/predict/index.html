@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Groovenauts</title>
+    </head>
+    <style>
+	div{
+		background-position : 50% 50%;
+		width : 100%;
+		height : 200px;
+		background-image : url("bb.jpg");
+		background-repeat : repeat;
+		opacity : 0.7;
+		font-color : "balck";
+            }
+	h1{
+		tex-align : left;
+	}
+	h2{
+		div-aligin : center;
+		justify-content : center;
+		text-align : center;
+	}
+	h3{
+		div-aligin : center;
+		justify-content : center;
+		text-align : center;
+	}
+	h4{
+		div-aligin : center;
+		justify-content : center;
+		text-align : center;
+	}
+    </style>
+    <body>
+        <h1>
+	<hr>
+            <font size=21 color=#80A0FA>
+            <b>What's the status of my hair?</b></font>
+            <hr>
+        </h1>
+        <h2> 
+	<font size = 6>
+	Predict your condition!</font>
+	<font size = 3>
+	 <p>You can easily check your hair loss.<br>
+	When you take a picture of your scalp and upload it to a website, powerful A.<br>
+	I software will check your hair condition</p>
+	<form method='Post' action="" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p}}
+        <input type='submit' class='btn btn-default' value="Upload" />
+        </form></font>
+        </h2>
+        <h3>
+	<fieldset><legend align="center">
+	<font size=6>
+            Predict Result</font>
+        <p>{{source}}</p></legend></fieldset>
+        </h3>
+        <h4><div>
+	<font size=3 color = "white">
+	If you want to check more details, please contact to us.<br>
+	Please complete and submit the form below to contact us.</font><br>
+        </div></h4>
+    </body>
+</html>
