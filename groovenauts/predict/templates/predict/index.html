@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
 <html>
@@ -40,7 +41,7 @@
         <h1>
 	<hr>
 		{% load staticfiles %}
-            <font size=21 color=#80A0FA>
+            <font size=21 color=#1F50B5>
 	<img width=70 height = 50 src="{% static "predict/dd.jpg" %}" alt="My image1">
             <b>What's the status of my hair?</b></font>
             <hr>
@@ -51,8 +52,13 @@
 	<img height=50 width=60 src="{% static "predict/aa.jpg" %}" alt="My image2">
 	<font size = 3>
 	 <p>You can easily check your hair loss.<br>
-	When you take a picture of your scalp and upload it to a website, powerful A.<br>
-	I software will check your hair condition</p>
+	Please take a picture of your scalp and upload it to us.<br>
+	powerful A.I software will check your hair condition</p></font>
+	<font size = 1 color=#FFA7A7>
+	<p>**sex is male or female<br>
+	**Please upload a file of 1.5mb or less
+	<p/></font>
+	<font size = 3>
 	<form method='Post' action="" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p}}
         <input type='submit' class='btn btn-default' value="Upload" />
@@ -63,7 +69,9 @@
 	<font size=6>
             Predict Result</font>
 	<img height=40 width=50 src="{% static "predict/cc.jpg" %}" alt="My image3"></legend>	
-        	<p>{{source}}</p></fieldset>
+        	<p>{{source}}<br><font size = 1 color=#FFA7A7>
+	**A.I has an 80% prediction. It may be different from your actual scalp condition.
+	</font></p></fieldset>
         </h3>
         <h4><div>
 	<font size=3 color = "white">
